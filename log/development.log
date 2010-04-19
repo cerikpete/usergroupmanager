@@ -23,3 +23,271 @@ Migrating to CreateMeetings (20100410192953)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("meetings")[0m
+
+
+Processing MeetingsController#index (for 127.0.0.1 at 2010-04-18 19:47:09) [GET]
+Rendering meetings/index
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://localhost/meetings]
+
+
+Processing MeetingsController#index (for 127.0.0.1 at 2010-04-18 19:55:05) [GET]
+  [4;36;1mMeeting Load (0.0ms)[0m   [0;1mSELECT * FROM "meetings" [0m
+Rendering meetings/index
+ERROR: compiling _run_erb_app47views47meetings47index46html46erb RAISED compile error
+c:/development/usergroupmanager/app/views/meetings/index.html.erb:4: syntax error, unexpected kDO
+;  @meetings.each |meeting| do ; @output_buffer.concat "\n      <p>"
+                              ^
+c:/development/usergroupmanager/app/views/meetings/index.html.erb:10: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47meetings47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<html>\n  <body>\n    <p>Below is the list of all meetings in the system:</p>\n    "
+
+
+;  @meetings.each |meeting| do ; @output_buffer.concat "\n      <p>"
+; @output_buffer.concat(( f.label :meeting.title ).to_s); @output_buffer.concat "</p>\n    "
+;  end ; @output_buffer.concat "\n  </body>\n</html>  \n"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/development/usergroupmanager/app/views/meetings/index.html.erb:10:in `compile!'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+c:/ruby/ruby-1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/ruby/ruby-1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/development/usergroupmanager/app/views/meetings/index.html.erb:4: syntax error, unexpected kDO
+;  @meetings.each |meeting| do ; @output_buffer.concat "\n      <p>"
+                              ^
+c:/development/usergroupmanager/app/views/meetings/index.html.erb:10: syntax error, unexpected kENSURE, expecting $end) on line #4 of app/views/meetings/index.html.erb:
+1: <html>
+2:   <body>
+3:     <p>Below is the list of all meetings in the system:</p>
+4:     <% @meetings.each |meeting| do %>
+5:       <p><%= f.label :meeting.title %></p>
+6:     <% end %>
+7:   </body>
+
+    app/views/meetings/index.html.erb:10:in `compile!'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (110.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MeetingsController#index (for 127.0.0.1 at 2010-04-18 19:57:46) [GET]
+  [4;35;1mMeeting Load (0.0ms)[0m   [0mSELECT * FROM "meetings" [0m
+Rendering meetings/index
+ERROR: compiling _run_erb_app47views47meetings47index46html46erb RAISED compile error
+c:/development/usergroupmanager/app/views/meetings/index.html.erb:5: syntax error, unexpected kDO
+;  @meetings.each |meeting| do ; @output_buffer.concat "\n      <li>"
+                              ^
+c:/development/usergroupmanager/app/views/meetings/index.html.erb:12: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47meetings47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<html>\n  <body>\n    <p>Below is the list of all meetings in the system:</p>\n    <ul>\n    "
+
+
+
+;  @meetings.each |meeting| do ; @output_buffer.concat "\n      <li>"
+; @output_buffer.concat(( meeting.title ).to_s); @output_buffer.concat "</li>\n    "
+;  end ; @output_buffer.concat "\n    </ul>\n  </body>\n</html>  \n"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/development/usergroupmanager/app/views/meetings/index.html.erb:12:in `compile!'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+c:/ruby/ruby-1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+c:/ruby/ruby-1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/ruby/ruby-1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/development/usergroupmanager/app/views/meetings/index.html.erb:5: syntax error, unexpected kDO
+;  @meetings.each |meeting| do ; @output_buffer.concat "\n      <li>"
+                              ^
+c:/development/usergroupmanager/app/views/meetings/index.html.erb:12: syntax error, unexpected kENSURE, expecting $end) on line #5 of app/views/meetings/index.html.erb:
+2:   <body>
+3:     <p>Below is the list of all meetings in the system:</p>
+4:     <ul>
+5:     <% @meetings.each |meeting| do %>
+6:       <li><%= meeting.title %></li>
+7:     <% end %>
+8:     </ul>
+
+    app/views/meetings/index.html.erb:12:in `compile!'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/ruby-1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MeetingsController#index (for 127.0.0.1 at 2010-04-18 19:58:26) [GET]
+  [4;36;1mMeeting Load (0.0ms)[0m   [0;1mSELECT * FROM "meetings" [0m
+Rendering meetings/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/meetings]
+  [4;36;1mMeeting Create (0.0ms)[0m   [0;1mINSERT INTO "meetings" ("location", "created_at", "title", "updated_at", "date", "description", "presenter") VALUES(NULL, '2010-04-18 23:59:47', 'Test Meeting', '2010-04-18 23:59:47', NULL, NULL, NULL)[0m
+
+
+Processing MeetingsController#index (for 127.0.0.1 at 2010-04-18 19:59:51) [GET]
+  [4;35;1mMeeting Load (0.0ms)[0m   [0mSELECT * FROM "meetings" [0m
+Rendering meetings/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/meetings]

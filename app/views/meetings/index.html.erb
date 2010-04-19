@@ -1,0 +1,10 @@
+<html>
+  <body>
+    <p>Below is the list of all meetings in the system:</p>
+    <ul>
+    <% @meetings.each do |meeting| %>
+      <li><%= meeting.title %></li>
+    <% end %>
+    </ul>
+  </body>
+</html>  
