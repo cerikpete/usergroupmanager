@@ -11,4 +11,4 @@ test: &TEST
 production:
   adapter: mongodb
   host: localhost
-  database: wordbadger
+  database: usergroupmanager
