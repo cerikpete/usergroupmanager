@@ -3,7 +3,7 @@
     <p>Below is the list of all meetings in the system:</p>
     <ul>
     <% @meetings.each do |meeting| %>
-      <li><%= meeting.title %></li>
+        <li><%= link_to meeting.title, edit_meeting_path(meeting) %></li>
     <% end %>
     </ul>
   </body>
