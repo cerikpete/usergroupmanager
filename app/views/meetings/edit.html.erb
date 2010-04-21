@@ -1,0 +1,8 @@
+<html>
+  <body>
+    <% form_for(@meeting) do |f| %>
+      <p><%= f.label :title %>: <%= f.text_field :title %></p>
+      <p><% f.submit %></p>
+    <% end %>
+  </body>
+ </html> 
