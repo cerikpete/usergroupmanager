@@ -1,8 +1,8 @@
 <html>
   <body>
-    <% form_for(@meeting) do |f| %>
+    <% form_for :meeting, :url => meeting_path, :html => { :method => :put } do |f| %>
       <p><%= f.label :title %>: <%= f.text_field :title %></p>
-      <p><% f.submit %></p>
+      <%= submit_tag 'Save' %>
     <% end %>
   </body>
  </html> 
