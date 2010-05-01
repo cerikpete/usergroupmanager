@@ -1,7 +1,4 @@
-<% form_for :meeting, :url => meeting_path, :html => { :method => :put } do |f| %>
-  <p><%= f.label :title %>: <%= f.text_field :title %></p>
-  <p><%= f.label :location %>: <%= f.text_field :location %></p>
-  <p><%= f.label :presenter %>: <%= f.text_field :presenter %></p>
-  <p><%= f.label :description %>: <%= f.text_field :description %></p>
-  <%= submit_tag 'Save' %>
-<% end %>
+<p><%= meeting_details.label :title %>: <%= meeting_details.text_field :title %></p>
+<p><%= meeting_details.label :location %>: <%= meeting_details.text_field :location %></p>
+<p><%= meeting_details.label :presenter %>: <%= meeting_details.text_field :presenter %></p>
+<p><%= meeting_details.label :description %>: <%= meeting_details.text_field :description %></p>

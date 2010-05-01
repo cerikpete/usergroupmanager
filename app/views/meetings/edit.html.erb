@@ -1,3 +1,5 @@
 <% content_for :page_title do %>Edit Meeting<% end %>
-
-<%= render :partial => "meeting_details" %>
+<% form_for :meeting, :url => meeting_path, :html => { :method => :put } do |f| %>
+  <%= render :partial => "meeting_details", :object => f %>
+  <%= submit_tag 'Save' %>
+<% end %>
