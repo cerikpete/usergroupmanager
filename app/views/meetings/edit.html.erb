@@ -1,5 +1,3 @@
-<html>
-  <body>
-    <%= render :partial => "meeting_details" %>
-  </body>
- </html> 
+<% content_for :page_title do %>Edit Meeting<% end %>
+
+<%= render :partial => "meeting_details" %>

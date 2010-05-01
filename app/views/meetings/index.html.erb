@@ -1,10 +1,8 @@
-<html>
-  <body>
-    <p>Below is the list of all meetings in the system:</p>
-    <ul>
-    <% @meetings.each do |meeting| %>
-        <li><%= link_to meeting.title, edit_meeting_path(meeting) %></li>
-    <% end %>
-    </ul>
-  </body>
-</html>  
+<% content_for :page_title do %>Meetings<% end %>
+
+<p>Below is the list of all meetings in the system:</p>
+<ul>
+  <% @meetings.each do |meeting| %>
+    <li><%= link_to meeting.title, edit_meeting_path(meeting) %></li>
+  <% end %>
+</ul>
