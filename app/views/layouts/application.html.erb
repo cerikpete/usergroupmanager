@@ -4,14 +4,9 @@
     <title><%= yield :page_title %></title>
     <%= javascript_include_tag "jquery.1.4.2.min" %>
     <%= javascript_include_tag "jquery-ui.min" %>
-    <script type="text/javascript">
-      $(function() {
-        $("#meeting_meeting_date").datepicker();
-      });
-    </script>
+    <%= yield :header_data %>
   </head>
   <body>
     <%= yield %>
   </body>
 </html>
-

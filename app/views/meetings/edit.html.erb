@@ -1,4 +1,12 @@
 <% content_for :page_title do %>Edit Meeting<% end %>
+<% content_for :header_data do %>
+    <script type="text/javascript">
+      $(function() {
+        $("#meeting_meeting_date").datepicker();
+      });
+    </script>
+<% end %>
+
 <% form_for :meeting, :url => meeting_path, :html => { :method => :put } do |f| %>
   <%= render :partial => "meeting_details", :object => f %>
   <%= submit_tag 'Save' %>
