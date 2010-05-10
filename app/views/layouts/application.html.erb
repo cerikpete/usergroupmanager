@@ -2,6 +2,8 @@
 <html>
   <head>
     <title><%= yield :page_title %></title>
+    <%= javascript_include_tag "jquery.1.4.2.min" %>
+    <%= javascript_include_tag "jquery-ui.min" %>
   </head>
   <body>
     <%= yield %>
