@@ -5,9 +5,13 @@
   <%= meeting_details.text_area(:address, :rows => 4) %>
 </p>
 <p><%= meeting_details.label :meeting_date %>: <%= meeting_details.text_field :meeting_date %></p>
-<p><%= meeting_details.label :presenter %>: <%= meeting_details.text_field :presenter %></p>
 <p>
   <%= meeting_details.label :description %>: <br />
   <%= meeting_details.text_area :description %>
 </p>
 <p><%= meeting_details.label :registration_link %>: <%= meeting_details.text_field :registration_link %></p>
+<p><%= meeting_details.label :presenter %>: <%= meeting_details.text_field :presenter %></p>
+<p>
+  <%= meeting_details.label :presenter_bio %>: <br />
+  <%= meeting_details.text_area :presenter_bio %>
+</p>
