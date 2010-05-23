@@ -1,4 +1,4 @@
-<% content_for :page_title do %>Edit Meeting<% end %>
+<% content_for :page_title do %>Create Meeting<% end %>
 <% content_for :header_data do %>
     <script type="text/javascript">
       $(function() {
@@ -11,3 +11,4 @@
   <%= render :partial => "meeting_details", :object => f %>
   <%= submit_tag 'Create' %>
 <% end %>
+<p><%= link_to "Return to the list of meetings", meetings_path %></p>
