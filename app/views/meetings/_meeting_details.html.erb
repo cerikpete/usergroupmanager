@@ -1,5 +1,12 @@
 <p><%= meeting_details.label :title %>: <%= meeting_details.text_field :title %></p>
-<p><%= meeting_details.label :location %>: <%= meeting_details.text_field :location %></p>
-<p><%= meeting_details.label :presenter %>: <%= meeting_details.text_field :presenter %></p>
-<p><%= meeting_details.label :description %>: <%= meeting_details.text_field :description %></p>
+<p><%= meeting_details.label :host_company %>: <%= meeting_details.text_field :host_company %></p>
+<p>
+  <%= meeting_details.label :address %>: <br /> 
+  <%= meeting_details.text_area(:address, :rows => 4) %>
+</p>
 <p><%= meeting_details.label :meeting_date %>: <%= meeting_details.text_field :meeting_date %></p>
+<p><%= meeting_details.label :presenter %>: <%= meeting_details.text_field :presenter %></p>
+<p>
+  <%= meeting_details.label :description %>: <br />
+  <%= meeting_details.text_area :description %>
+</p>
