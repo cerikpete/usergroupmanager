@@ -7,5 +7,6 @@ class Meeting
   key :address, String
   key :presenter, String
   key :description, String
+  key :registration_link, String
   timestamps!
 end 
