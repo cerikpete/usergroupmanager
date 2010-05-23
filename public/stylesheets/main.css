@@ -1,4 +1,15 @@
 label
 {
   float: left;
+  width: 150px;
+}
+
+fieldset
+{
+  width: 600px;
+}
+
+fieldset input, fieldset textarea 
+{  
+  clear: both;
 }
