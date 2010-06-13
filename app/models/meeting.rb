@@ -2,6 +2,7 @@ class Meeting
   include MongoMapper::Document
 
   key :title, String
+  key :url_friendly_title, String
   key :meeting_date, Date
   key :host_company, String
   key :address, String
