@@ -3,8 +3,8 @@ class MeetingsController < ApplicationController
     @meetings = Meeting.all
   end
 
-  def view(meeting_name)
-    @meeting = Meeting.find_by_url_friendly_title(meeting_name)
+  def view
+    @meeting = Meeting.find_by_url_friendly_title(params[:meeting_name])
   end
   
   def create
