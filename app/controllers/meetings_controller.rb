@@ -25,6 +25,7 @@ class MeetingsController < ApplicationController
     @meeting = Meeting.find(params[:id])   
     if @meeting.update_attributes(params[:meeting])
       convert_title_to_url_friendly_title(@meeting)
+      @meeting.save
       redirect_to meetings_path
     else
       render :edit, :id => @meeting.id
@@ -32,6 +33,6 @@ class MeetingsController < ApplicationController
   end
 
   def convert_title_to_url_friendly_title(meeting)
-    meeting.url_friendly_title = meeting.title.gsub(/\s/, "_")
+    meeting.url_friendly_title = meeting.title.gsub(/\s/, "_").downcase
   end
 end
