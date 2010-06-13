@@ -1,1 +1,16 @@
-<p><%= @meeting.title %></p>
+<h1><%= @meeting.title %></h1>
+
+<p>
+  Date: <%= @meeting.meeting_date %><br />
+  6:00 - 9:00 PM
+</p>
+<p>
+  Hosted by <%= @meeting.host_company %><br />
+  <%= @meeting.address %>
+</p>
+
+<%= @meeting.description %>
+
+<p>Presented by: <%= @meeting.presenter %></p>
+
+<p><%= @meeting.presenter_bio %>
