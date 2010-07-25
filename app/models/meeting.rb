@@ -10,5 +10,6 @@ class Meeting
   key :presenter_bio, String
   key :description, String
   key :registration_link, String
+  key :map_link, String
   timestamps!
 end 

@@ -17,3 +17,27 @@ label
 {
   text-align: left;
 }
+
+h1
+{
+  color: #000066;
+  margin-bottom: -5px;
+}
+
+h2 
+{
+  color: #003399;
+}
+
+.meeting
+{
+  float: left;
+  width: 500px;
+}
+
+.sidebar
+{
+  float: left;
+  background-color: #FFFF66;
+  padding: 1em;
+}
