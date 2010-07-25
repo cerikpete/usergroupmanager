@@ -1,5 +1,6 @@
-<h1><%= @meeting.title %></h1>
+<div class="center">
 <div class="meeting">
+<h1><%= @meeting.title %></h1>
 <h2>When</h2>
 <p>
   Date: <%= @meeting.meeting_date %><br />
@@ -19,9 +20,10 @@
 <p<%= @meeting.presenter %></p>
 
 <p><%= @meeting.presenter_bio %>
-</div>
 
 <div class="sidebar">
-<p><a href="<%= @meeting.registration_link %>">Register now</a></p>
-<p><a href="<%= @meeting.map_link %>">Map</a></p>
+  <p><a href="<%= @meeting.registration_link %>">Register now</a></p>
+  <p><a href="<%= @meeting.map_link %>">Map</a></p>
+</div>
+</div>
 </div>
