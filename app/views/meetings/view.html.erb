@@ -1,29 +1,28 @@
 <div class="center">
-<div class="meeting">
-<h1><%= @meeting.title %></h1>
-<h2>When</h2>
-<p>
-  Date: <%= @meeting.meeting_date %><br />
-  6:00 - 9:00 PM
-</p>
+  <div class="meeting">
+    <h1><%= @meeting.title %></h1>
+    <h2>When</h2>
+    <p>
+      Date: <%= @meeting.meeting_date %><br />
+      6:00 - 9:00 PM
+    </p>
 
-<h2>Host</h2>
-<p>
-  <strong><%= @meeting.host_company %></strong><br />
-  <%= @meeting.address %>
-</p>
+    <h2>Host</h2>
+    <p>
+      <strong><%= @meeting.host_company %></strong><br />
+      <%= @meeting.address %>
+    </p>
 
-<h2>Details</h2>
-<%= @meeting.description %>
+    <h2>Details</h2>
+    <%= @meeting.description %>
 
-<h2>Presenter</h2>
-<p<%= @meeting.presenter %></p>
+    <h2>Presenter</h2>
+    <p<%= @meeting.presenter %></p>
 
-<p><%= @meeting.presenter_bio %>
-
+    <p><%= @meeting.presenter_bio %>
+  </div>
+</div>
 <div class="sidebar">
   <p><a href="<%= @meeting.registration_link %>">Register now</a></p>
   <p><a href="<%= @meeting.map_link %>">Map</a></p>
-</div>
-</div>
 </div>
