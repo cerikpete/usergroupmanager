@@ -37,7 +37,7 @@ h2
   margin: auto;
 }
 
-.meeting
+.center
 {
   float: left;
   width: 830px;
@@ -50,6 +50,6 @@ h2
 .sidebar
 {
   float: right;
-  background-color: #FFFF66;
+  background-color: #FFFFCC;
   padding: 1em;
 }
